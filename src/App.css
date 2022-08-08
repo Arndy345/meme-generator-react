@@ -2,43 +2,91 @@
 	box-sizing: border-box;
 	margin: 0;
 }
-
-body {
-	color: white;
-}
 nav {
-	background-color: #21222a;
-	color: #61dafb;
+	height: 70px;
+
+	box-shadow: 0px 2.98256px 7.4564px
+		rgba(0, 0, 0, 0.1);
 	padding: 10px 10px;
 }
 
-nav > h4 {
-	color: white;
-	margin-left: 10px;
+nav > img {
+	position: absolute;
+	width: 82.02px;
+	height: 25.35px;
+	left: 30px;
+	top: 22px;
+	cursor: pointer;
+	max-width: 100px;
 }
-nav > div {
+
+section {
+	padding: 20px;
+}
+
+.hero-section {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.section {
-	background: #282d35;
-	height: 100vh;
-	padding: 20px 15px;
-	text-align: justify;
-	/* background-image: url("./logo.svg");
-	background-repeat: no-repeat;
-	background-position: 100% 25%; */
+
+.hero-section img {
+	max-width: 800px;
+	align-self: center;
 }
-.section li {
-	padding-block: 10px;
+
+.hero-section > h2 {
+	font-weight: 800;
 }
-li::marker {
-	color: #61dafb;
-	font-size: 1.4rem;
+.hero-section > p {
+	font-weight: 400;
 }
-@media screen and (min-width: 476px) {
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+
+.bold {
+	font-weight: 800;
+}
+.gray {
+	color: gray;
+}
+
+.cards-list {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 20px;
+	overflow-x: auto;
+}
+.card {
+	width: 175px;
+	font-size: 12px;
+	flex: 0 0 auto; /* ADD */
+	display: flex; /* ADD */
+	flex-direction: column; /* ADD */
+	position: relative;
+}
+.icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: white;
+	padding: 2px;
+	font-size: 0.5rem;
+	border-radius: 2px;
+}
+.card--image {
+	width: 100%;
+	border-radius: 9px;
+}
+
+.card--stats {
+	display: flex;
+	align-items: center;
+}
+.card--star {
+	height: 14px;
+}
+
+/* @media screen and (min-width: 576px) {
+	.hero-section {
+		flex-direction: row;
 	}
-}
+} */
