@@ -1,4 +1,4 @@
-export default let data =[
+let data = [
 	{
 		id: 1,
 		title: "Life Lessons with Katie Zaferes",
@@ -42,3 +42,5 @@ export default let data =[
 		openSpots: 3,
 	},
 ];
+
+export default data;

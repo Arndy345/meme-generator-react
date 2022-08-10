@@ -7,10 +7,14 @@ function Card(props) {
 			<img
 				src={require(`./images/${props.coverImg}`)}
 				className="card--image"
-				alt='cover image'
+				alt="cover"
 			/>
 			<div className="card--stats">
-				<img src={star} className="card--star" alt='icon'/>
+				<img
+					src={star}
+					className="card--star"
+					alt="icon"
+				/>
 				<span>{props.stats.rating}</span>
 				<span className="gray">
 					({props.stats.reviewCount}) •{" "}
