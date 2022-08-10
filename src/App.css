@@ -9,65 +9,40 @@ body {
 nav {
 	height: 70px;
 	width: 100%;
-
-	box-shadow: 0px 2.98256px 7.4564px
-		rgba(0, 0, 0, 0.1);
+	color: white;
+	background-color: #f55a5a;
 	padding: 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 nav > img {
-	position: absolute;
-	width: 82.02px;
-	height: 25.35px;
-	left: 30px;
-	top: 22px;
+	width: 24px;
+	height: 24px;
 	cursor: pointer;
 	max-width: 100px;
+	margin-right: 5px;
 }
 
 section {
 	padding: 20px;
 }
 
-.hero-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.hero-section img {
-	max-width: 800px;
-	align-self: center;
-	width: 90%;
-}
-
-.hero-section > h2 {
-	font-weight: 800;
-}
-.hero-section > p {
-	font-weight: 400;
-}
-
 .bold {
 	font-weight: 800;
-}
-.gray {
-	color: gray;
 }
 
 .cards-list {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	gap: 20px;
 	overflow-x: auto;
 }
 .card {
-	width: 175px;
 	font-size: 12px;
-	flex: 0 0 auto; /* ADD */
-	display: flex; /* ADD */
-	flex-direction: column; /* ADD */
-	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 .icon {
 	position: absolute;
@@ -79,34 +54,57 @@ section {
 	border-radius: 2px;
 }
 .card--image {
-	width: 100%;
-	border-radius: 9px;
+	width: 80%;
+	border-radius: 5px;
+}
+.card--stats {
+	padding: 5px;
+	min-width: 210px;
+	max-height: 150px;
+}
+.card--stats {
+	padding: 0 5px;
 }
 
-.card--stats {
+.card-top {
 	display: flex;
 	align-items: center;
+	margin: 0;
 }
+.card-top a {
+	text-decoration: none;
+}
+.card-top img {
+	margin-right: 5px;
+}
+.card-top span {
+	margin-right: 10px;
+}
+
 .card--star {
 	height: 14px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 400px) {
 	.modifier {
 		flex-direction: row;
-		margin: 0 auto;
-		justify-content: space-between;
 		max-width: 880px;
 	}
-
-	.modifier img {
-		margin-right: 15px;
+	.card--stats {
+		padding: 0;
+		margin: 0 10px;
+		max-width: 220px;
 	}
-	.card {
+
+	.card--image {
+		width: 12.5vw;
+		min-width: 150px;
+	}
+	/*.card {
 		margin: 0 auto;
 	}
 	.cards-list {
 		max-width: 880px;
 		margin: auto;
-	}
+	} */
 }

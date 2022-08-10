@@ -1,42 +1,40 @@
-import React from "react";
-import star from "./images/Star.png";
+import icon from "./images/location.png";
 
-function Card(props) {
+const Card = (props) => {
 	return (
-		<div className="card">
+		<div className="card modifier">
 			<img
-				src={require(`./images/${props.coverImg}`)}
+				src={props.imageUrl}
 				className="card--image"
 				alt="cover"
 			/>
 			<div className="card--stats">
-				<img
-					src={star}
-					className="card--star"
-					alt="icon"
-				/>
-				<span>{props.stats.rating}</span>
-				<span className="gray">
-					({props.stats.reviewCount}) •{" "}
-				</span>
-				<span className="gray">
-					{props.location}
-				</span>
+				<h2>{props.title}</h2>
+				<>
+					<h3>{`${props.startDate} - ${props.endDate}`}</h3>
+				</>
+				<p>{props.description}</p>
+				<div className="card-top">
+					<a
+						href={props.googleMapsUrl}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={icon} alt="location-icon" />
+					</a>
+
+					<span>{props.location}</span>
+					<a
+						href={props.googleMapsUrl}
+						target="_blank"
+						rel="noreferrer"
+					>
+						View on Google Maps
+					</a>
+				</div>
 			</div>
-			<p className="card--title">{props.title}</p>
-			<p className="card--price">
-				<span className="bold">
-					From ${props.price}
-				</span>{" "}
-				/ person
-			</p>
-			{props.openSpots ? (
-				<span className="icon">ONLINE</span>
-			) : (
-				<span className="icon">SOLD OUT</span>
-			)}
 		</div>
 	);
-}
+};
 
 export default Card;
