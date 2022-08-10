@@ -5,7 +5,7 @@ function Hero() {
 	return (
 		<section className="hero-section modifier">
 			<div className="">
-				<img src={photo} alt="photo-grid" />
+				<img src={photo} alt="grid" />
 			</div>
 			<div>
 				<h2>Online Experiences</h2>
