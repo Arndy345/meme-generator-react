@@ -35,6 +35,7 @@ section {
 .hero-section img {
 	max-width: 800px;
 	align-self: center;
+	width: 90%;
 }
 
 .hero-section > h2 {
