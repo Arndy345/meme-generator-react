@@ -4,7 +4,9 @@ const Navbar = () => {
 	return (
 		<nav>
 			<img src={logo} alt="logo" />
-			<p>My Travel journal.</p>
+			<p>MEME Generator</p>
+
+			<header>React Course Project-3</header>
 		</nav>
 	);
 };
